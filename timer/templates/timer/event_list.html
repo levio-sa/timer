@@ -9,6 +9,19 @@
         <div>
             <h2>Your Upcoming Events</h2>
         </div>
+        <div>
+            
+            
+            {% for event in events%}
+                <div>
+                    <p>{{event.name}}</p>
+                    
+                    <p>{{event.time_until_event}} days left</p>
+                    
+                    <p>Date: {{event.time}}</p>
+                </div>
+            {% endfor %}
+        </div>
         
 
     </body>
