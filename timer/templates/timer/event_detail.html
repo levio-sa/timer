@@ -1,0 +1,32 @@
+{% extends 'timer/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card text-center mb-3">
+                    <div class="row no-gutters align-content-center">
+                        <div class="col-md-4">
+                            <img src="{% static 'image/im2.jpg' %}" class="card-img">
+                        </div>
+                        <div class="col-md-8">                        
+                        <div class="card-body">
+                            <h1 class="card-title">{{event.name}}</h1>
+                            {% if event.time_until_event > 0 %}
+                                <h3 class="card-subtitle">{{event.time_until_event}}</h3>
+                                <h4 class="card-subtitle">DAYS LEFT</h4>
+                            {% elif event.time_until_event == 0 %}
+                                <h3 class="card-subtitle">EVENT TODAY</h3>
+                            {% else %}
+                                <h3 class="card-subtitle">EVENT OVER</h3>
+                            {% endif %}                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

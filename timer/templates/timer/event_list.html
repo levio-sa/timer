@@ -1,28 +1,36 @@
-<html>
-    <head>
-        <title>Upcoming Events</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Count It Down</a></h1>    
-        </div>
-        <div>
-            <h2>Your Upcoming Events</h2>
-        </div>
-        <div>
-            
-            
-            {% for event in events%}
-                <div>
-                    <p>{{event.name}}</p>
-                    
-                    <p>{{event.time_until_event}} days left</p>
-                    
-                    <p>Date: {{event.time}}</p>
-                </div>
-            {% endfor %}
-        </div>
-        
+{% extends 'timer/base.html' %}
 
-    </body>
-</html>
+
+{% block content %}
+    <section class="jumbotron">
+        <div class="container">
+            <div class="row justify-content-center">                   
+            <h2>Your Upcoming Events</h2>
+            </div>
+            <div class="row justify-content-center">
+            <h3>Be Prepared</h3>
+            </div>
+        </div>    
+    </section>
+
+    <section class="container">        
+        <div class="row">
+                        
+           {% for event in events%}
+                <span class="col-sm-4 border border-info">
+                    <div class="text aligned-center">
+                                           
+                            <h3><a href="{% url 'event_detail' pk=event.pk %}">{{event.name}}</a></h3>
+                    
+                            <p>{{event.time_until_event}} days left</p>
+                    
+                            <p>Date: {{event.time}}</p>
+                        
+                    </div>
+                    
+                </span>
+            {% endfor %}
+            
+        </div>
+    </section>
+{% endblock %}

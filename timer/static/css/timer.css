@@ -1,0 +1,71 @@
+.page-header{
+    background-color: navy;
+    padding: 20px;
+}
+
+
+header{
+
+    font-family: "Beth Ellen";
+    
+    
+    
+}
+.jumbotron{
+    display:flex;
+    align-items:center;
+    background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    color: white;
+    height: 300px;
+    text-shadow: 0.25px;
+    float: initial;
+    
+}
+.jumbotron h2{
+    font-size: 60px;
+    margin: 0;
+    color: white;
+}
+.jumbotron h3{
+    margin: 0 0 20px;
+    color: wheat;
+}
+h1 a{
+    color: violet;
+    font-size: 3rem;
+    
+}
+.card{
+    margin:50px;
+}
+.card-title{
+    color: black;
+}
+h2{
+    font-family: "Georgia";
+    color: white
+}
+
+p{
+    font-family: sans-serif;
+}
+
+footer {
+    font-size: 12px;
+    padding: 20px 0;
+  }
+  
+  footer .col-sm-8 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer li img {
+    width: 32px;
+    height: 32px;
+  }
